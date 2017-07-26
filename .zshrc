@@ -84,15 +84,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias pihole='ssh pi@192.168.1.38'
-alias nasdb='mysql -h 192.168.1.55 -u Macbook -p'
-alias esxi='ssh root@192.168.1.88'
-alias qnap='ssh admin@192.168.1.55'
-alias hop='ssh graham.mcmillan@ec2-54-83-15-32.compute-1.amazonaws.com'
-alias kodi='ssh root@192.168.1.20'
-alias dock='ssh gmcmillan@192.168.1.78'
-alias nagpi='ssh pi@192.168.1.43'
-alias pidb='mysql -h 192.168.178.37 -uroot -p'
 alias caf='caffeinate'
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say'
 alias py3='python3'
