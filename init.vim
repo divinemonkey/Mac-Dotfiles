@@ -19,6 +19,7 @@ syntax on
 set background=dark
 colorscheme Tomorrow-Night
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" let &t_Co=256
 
 " Line number options
 set number
@@ -47,3 +48,6 @@ filetype plugin indent on
 set cursorline
 set history=1000
 set backspace=indent,eol,start
+
+" Powerline font
+let g:airline_powerline_fonts = 1
