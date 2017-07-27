@@ -55,6 +55,7 @@ plugins=(git brew osx pip python sudo wd)
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:/Applications/MySQLWorkbench.app/Contents/MacOS
+export PATH=$PATH:/Users/gmcmillan/Library/Python/2.7/bin
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -87,3 +88,4 @@ source $ZSH/oh-my-zsh.sh
 alias caf='caffeinate'
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say'
 alias py3='python3'
+alias cdpline='cd /Users/gmcmillan/Library/Python/2.7/lib/python/site-packages/powerline'
