@@ -5,7 +5,8 @@ export ZSH=/Users/gmcmillan/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME="solarized-powerline"
  
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -89,3 +90,6 @@ alias caf='caffeinate'
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say'
 alias py3='python3'
 alias cdpline='cd /Users/gmcmillan/Library/Python/2.7/lib/python/site-packages/powerline'
+
+# Include Z
+. ~/z/z.sh
