@@ -1,3 +1,20 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+#if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  #source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+#fi
+
+# Add env.sh
+#source ~/Projects/config/env.sh
+
+# Customize to your needs...
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/gmcmillan/.oh-my-zsh
 
@@ -90,6 +107,15 @@ alias caf='caffeinate'
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say'
 alias py3='python3'
 alias cdpline='cd /Users/gmcmillan/Library/Python/2.7/lib/python/site-packages/powerline'
+alias vim='nvim'
+
+# Vagrant Aliases
+alias vdd='vagrant destroy'
+alias vssh='vagrant ssh'
+alias vlist='vagrant box list'
+alias vup='vagrant up'
+
+# Docker aliases
 
 # Include Z
 . ~/z/z.sh
