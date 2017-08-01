@@ -67,7 +67,7 @@ ZSH_CUSTOM=~/.zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew osx pip python sudo wd)
+plugins=(git brew osx pip python sudo docker aws compleat git-extras jira npm vagrant)
 
 # User configuration
 
@@ -116,6 +116,15 @@ alias vlist='vagrant box list'
 alias vup='vagrant up'
 
 # Docker aliases
+alias dp='docker pull'
+alias dsrch='docker search'
+alias dinfo='docker info'
+alias dinspect='docker inspect'
+alias dr='docker run'
+alias dstop='docker stop'
+alias dimages='docker images'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
 
 # Include Z
 . ~/z/z.sh
