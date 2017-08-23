@@ -24,6 +24,7 @@ export ZSH=/Users/gmcmillan/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="agnoster"
 ZSH_THEME="solarized-powerline"
+#ZSH_THEME="refined"
  
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -67,7 +68,7 @@ ZSH_CUSTOM=~/.zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew osx pip python sudo docker aws compleat git-extras jira npm vagrant)
+plugins=(git brew osx pip python sudo docker aws compleat git-extras jira npm vagrant zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -106,7 +107,6 @@ source $ZSH/oh-my-zsh.sh
 alias caf='caffeinate'
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say'
 alias py3='python3'
-alias cdpline='cd /Users/gmcmillan/Library/Python/2.7/lib/python/site-packages/powerline'
 alias vim='nvim'
 
 # Vagrant Aliases
@@ -122,9 +122,27 @@ alias dinfo='docker info'
 alias dinspect='docker inspect'
 alias dr='docker run'
 alias dstop='docker stop'
-alias dimages='docker images'
-alias dps='docker ps'
-alias dpsa='docker ps -a'
+alias dimages='docker image ls'
+alias dps='docker container ls'
+alias dpsa='docker container ls -a'
+
+# Function to remove all Docker images and containers
+dokrmi () {
+	docker image rm `docker image ls | awk '{ print $3; }'`
+}
+
+rmcont () {
+	docker container rm `docker container ls -a | awk '{ print $1; }'`
+}
+
+dkrm () {
+	docker image ls
+	echo ""
+	echo "Which container would you like to remove?"
+	read $1
+}
 
 # Include Z
 . ~/z/z.sh
+
+KEYTIMEOUT=1

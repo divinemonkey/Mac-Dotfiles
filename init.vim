@@ -11,13 +11,17 @@ Plug 'hashivim/vim-packer'
 Plug 'hashivim/vim-terraform'
 Plug 'hashivim/vim-vagrant'
 Plug 'tpope/vim-surround'
+Plug 'ekalinin/dockerfile.vim'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 " Theme details
 syntax enable
 syntax on
+"set background=dark
+"colorscheme 1989
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme solarized
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " let &t_Co=256
 
@@ -51,3 +55,6 @@ set backspace=indent,eol,start
 
 " Powerline font
 let g:airline_powerline_fonts = 1
+let g:airline_theme='alduin'
+let g:airline_theme='solarized'
+let g:airline#extensions#tabline#enabled = 1
