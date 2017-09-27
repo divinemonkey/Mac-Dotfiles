@@ -145,7 +145,7 @@ alias screenap='screen /dev/cu.usbserial-AJ03LLHC 9600 8 1'
 alias screencpu='screen /dev/cu.usbserial-AJ03LLHC 115200 8 1'
 
 # findip alias to scan .10 subnet
-findip 192.168.10.0/24
+alias findip10='192.168.10.0/24'
 
 # Function to remove all Docker images and containers
 dokrmi () {
