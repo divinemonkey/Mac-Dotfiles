@@ -20,8 +20,8 @@ syntax enable
 syntax on
 "set background=dark
 "colorscheme 1989
-set background=dark
-colorscheme solarized
+"set background=dark
+colorscheme habiLight
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " let &t_Co=256
 
@@ -55,6 +55,7 @@ set backspace=indent,eol,start
 
 " Powerline font
 let g:airline_powerline_fonts = 1
-let g:airline_theme='alduin'
-let g:airline_theme='solarized'
+let g:airline_theme='onedark'
+"let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
+set t_ut=

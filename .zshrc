@@ -23,8 +23,8 @@ export ZSH=/Users/gmcmillan/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="agnoster"
-ZSH_THEME="solarized-powerline"
-#ZSH_THEME="refined"
+#ZSH_THEME="solarized-powerline"
+ZSH_THEME="refined"
  
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -75,6 +75,7 @@ plugins=(git brew osx pip python sudo docker aws compleat git-extras jira npm va
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:/Applications/MySQLWorkbench.app/Contents/MacOS
 export PATH=$PATH:/Users/gmcmillan/Library/Python/2.7/bin
+export PATH=$PATH:/Users/gmcmillan/Scripts
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -114,17 +115,37 @@ alias vdd='vagrant destroy'
 alias vssh='vagrant ssh'
 alias vlist='vagrant box list'
 alias vup='vagrant up'
+alias vstat='vagrant status'
 
 # Docker aliases
 alias dp='docker pull'
-alias dsrch='docker search'
+alias dsr='docker search'
 alias dinfo='docker info'
-alias dinspect='docker inspect'
+alias dins='docker inspect'
 alias dr='docker run'
-alias dstop='docker stop'
-alias dimages='docker image ls'
-alias dps='docker container ls'
-alias dpsa='docker container ls -a'
+alias dst='docker stop'
+alias dimg='docker image ls'
+alias dcl='docker container ls'
+alias dcla='docker container ls -a'
+alias dcrm='docker container rm'
+alias dirm='docker image rm'
+
+# Git aliases
+alias gi='git init'
+alias gad='git add'
+alias gcm='git commit -m'
+alias gpu='git push -u origin master'
+alias gst='git status'
+
+# Nmap scan of subnet .10 with MAC address
+alias nmap10='sudo nmap -sP -n 192.168.10.0/23'
+
+# Serial port connection aliases
+alias screenap='screen /dev/cu.usbserial-AJ03LLHC 9600 8 1'
+alias screencpu='screen /dev/cu.usbserial-AJ03LLHC 115200 8 1'
+
+# findip alias to scan .10 subnet
+findip 192.168.10.0/24
 
 # Function to remove all Docker images and containers
 dokrmi () {
@@ -145,4 +166,31 @@ dkrm () {
 # Include Z
 . ~/z/z.sh
 
+# Stops delay in Tmux... I think
 KEYTIMEOUT=1
+
+# Loading of Pure prompt
+autoload -U promptinit; promptinit
+
+prompt pure
+
+# Load Antigen (zsh plugin manager)
+source ~/antigen.zsh
+
+# Powerline-go
+#function powerline_precmd() {
+    #PS1="$(~/go/bin/powerline-go -error $? -shell zsh)"
+#}
+
+#function install_powerline_precmd() {
+  #for s in "${precmd_functions[@]}"; do
+    #if [ "$s" = "powerline_precmd" ]; then
+      #return
+    #fi
+  #done
+  #precmd_functions+=(powerline_precmd)
+#}
+
+#if [ "$TERM" != "linux" ]; then
+    #install_powerline_precmd
+#fi
